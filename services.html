@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playball&display=swap');
+body{
+background-color: #f3ede3;
+}
+
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+  margin-top: 200px;
+  width: 300%;
+  margin-left: -1000px;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.parallax { 
+  background-image: url("https://media.istockphoto.com/id/1044146052/photo/spa-background-with-a-space-for-a-text.jpg?s=170667a&w=0&k=20&c=9z-XH2iiSpEwkY07w3076NfXqSkBbWtJ8pAakdAf3HQ=");
+  width: 110%; 
+  min-height: 800px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0px;
+
+
+
+}
+
+.ser{
+
+text-align: center;
+position: absolute;
+font-size: 100px;
+margin-top: 400px;
+margin-left: 550px;
+font-family: 'Petit Formal Script', cursive; 
+}
+
+.title{
+
+font-family: 'Petit Formal Script', cursive; 
+text-align: center;
+position: absolute;
+font-size: 50px;
+padding-top: 50px;
+margin-left: 400px;
+
+}
+
+
+
+.massages1{
+  text-align: left;
+  position: absolute;
+  font-size: 50px;
+  padding-top: 20px;
+  margin-top: 300px;
+  margin-left: 100px;
+
+
+}
+
+
+.massages2{
+  text-align: left;
+  position: absolute;
+  font-size: 50px;
+  padding-top: 5px;
+  margin-top: 380px;
+  margin-left: 100px;
+  font-family: 'Petit Formal Script', cursive; 
+
+}
+.accordion {
+  position: absolute;
+  margin: 480px auto;
+  width: 50%;
+  padding-left: 100px;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #c9b7a8;
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #deceba;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+
+.massageIm{
+  width: 70%;
+  margin-bottom: 50px;
+  margin-left: 1000px;
+  margin-top: -250px;
+
+}
+
+.custom-accordion {
+    position: relative;
+    width: 100%;
+    margin-left: 800px;
+    margin-top: -290px;
+}
+
+[id^="custom-open-accordion"],
+[id^="custom-close-accordion"] {
+    background: #c9b7a8;
+    border-bottom: 1px solid #fff;
+    line-height: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 99%;
+}
+
+[id^="custom-close-accordion"] {
+    display: none;
+}
+
+.custom-accordion a {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: normal;
+    padding-left: 2%;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+[id^="custom-open-accordion"]:after,
+[id^="custom-close-accordion"]:after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.6);
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    z-index: 999;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.custom-target-fix {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.custom-accordion-content {
+    background: #deceba;
+    height: 0;
+    margin: -1px auto 0;
+    padding: 0 2.5%;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.custom-target-fix:target ~ .custom-accordion-content {
+    display: block;
+    height: auto;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.custom-target-fix:target ~ [id^="custom-close-accordion"] {
+    display: block;
+}
+
+.custom-target-fix:target ~ [id^="custom-open-accordion"] {
+    display: none;
+}
+
+.custom-target-fix:target ~ [id^="custom-close-accordion"]:after {
+    border-top: 10px solid #333;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+
+
+</style>
+
+
+</head>  
+<body>
+
+
+        
+          <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #c9b7a8;">
+            <a class="navbar-brand" href="./home.html" style="font-family: 'Petit Formal Script', cursive; color:#33271a"><img src="https://i.ibb.co/N7mGNtw/My-project.png" alt="" width="50" height="50">  Serenity Spa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"  href="./home.html" style="color: #33271a;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./services.html" style="color: #33271a; ">Our Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./specialists.html" style="color: #33271a;">Our Specialists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html" style="color: #33271a;  ">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./booking.html" style="margin-left: 1050px; color: #33271a;  ">Book Now</a>
+                </li>
+              </ul>
+            </div>
+        
+        </nav>
+  
+      <div class="parallax">
+        <h2 class="ser">Our Services</h2>
+        
+    </div>
+
+    <h2 class="title">Pamper your body, soul and spirit with <br>the following offerings:</h2>
+
+
+    <h3 class="massages1">Serenity Spa</h3>
+    <h3 class="massages2">Massages</h3>
+
+    <div class="accordion">
+      <!-- span to target fix closing accordion -->
+      <span class="target-fix" id="accordion"></span>
+       
+      <!-- First Accoridon Option -->
+      <div>
+          <!-- span to target fix accordion -->
+          <span class="target-fix" id="accordion1"></span>
+          
+          <!-- Link to open accordion, hidden when open --> 
+          <a href="#accordion1" id="open-accordion1" title="open" style="color: #33271a;">Classic Massages</a>
+          
+          <!-- Link to close accordion, hidden when closed -->
+          <a href="#accordion" id="close-accordion1" title="close" style="color: #33271a;">Classic Massages</a> 
+          
+          <!-- Accorion content goes in this div -->
+          <div class="accordion-content">
+            <div>
+             <li> <p style="color: #33271a; font-size: 20px">Stockholm (45 mins) 60$</p></li>
+             <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Gentle and medium pressures of Swedish massage</p><br><br>
+             <li> <p style="color: #33271a; font-size: 20px;">Aromassage (60 mins) 70$</p></li>
+             <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Light-medium pressured massage with fragrant oils</p>
+             
+
+            </div>
+          </div>
+      </div>
+
+      <!-- Second Accoridon Option -->
+      <div>
+          <span class="target-fix" id="accordion2"></span>
+          <a href="#accordion2" id="open-accordion2" title="open" style="color: #33271a;">Massage Journeys</a>
+          <a href="#accordion" id="close-accordion2" title="close" style="color: #33271a;">Massage Journeys</a>
+          <div class="accordion-content">
+            <li> <p style="color: #33271a; font-size: 20px;">Bali (60 mins) 60$</p></li>
+            <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Medium pressured massage with acupressure techniques</p><br><br>
+            <li> <p style="color: #33271a; font-size: 20px;">Hot Stone (60 mins) 70$</p></li>
+            <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Soft-medium pressured massage, using volcanic heated stones</p>
+                 
+          </div>
+      </div>
+
+      
+<div>
+  <img src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.mayamedispa.com%2Fmassage&psig=AOvVaw2qf-rqlLJyjDfoyMYhhvMI&ust=1686433167406000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjN7KCTt_8CFQAAAAAdAAAAABAE" alt="img" class="massageIm"></img>
+</div>
+
+<h3 style="position: relative; color: #33271a; font-size: 50px;  margin-right: 0px; margin-left:1370px; text-align:right; ">SerenitySpa</h3>
+<h3 style="font-family: 'Petit Formal Script', cursive; font-size: 50px; color: #33271a; position: relative; margin-top: 10px; margin-left: 1370px; text-align:right;">Beauty</h3>
+
+<img src="https://studentaffairs.lmu.edu/media/studentaffairs/brc/Spa-906x511.jpg" style="width: 75%; margin-top: -120px; padding-bottom: 50px"></img>
+
+
+ 
+<div class="custom-accordion">
+  <span class="custom-target-fix" id="custom-accordion"></span>
+
+  <div>
+      <span class="custom-target-fix" id="custom-accordion1"></span>
+
+      <a href="#custom-accordion1" id="custom-open-accordion1" title="Open"  style="color: #33271a;">Manicures</a>
+
+      <a href="#custom-accordion" id="custom-close-accordion1" title="Close" style="color: #33271a;">Manicures</a>
+
+      <div class="custom-accordion-content">
+        <li> <p style="color: #33271a; font-size: 20px;">Standard Nail Treatment 45$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Efficient and professional nail care for healthy and beautiful nails.</p><br><br>
+        <li> <p style="color: #33271a; font-size: 20px;">Deep Manicure Treatment 60$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Indulgent and rejuvenating manicure for perfectly pampered and polished hands.</p>
+      </div>
+  </div>
+
+  <div>
+      <span class="custom-target-fix" id="custom-accordion2"></span>
+
+      <a href="#custom-accordion2" id="custom-open-accordion2" title="Open" style="color: #33271a;">Pedicures</a>
+
+      <a href="#custom-accordion" id="custom-close-accordion2" title="Close" style="color: #33271a;">Pedicures</a>
+
+      <div class="custom-accordion-content">
+        <li> <p style="color: #33271a; font-size: 20px;">Standard Pedicure Treatment 55$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Relaxing and revitalizing pedicure for happy and healthy feet.</p><br><br>
+        <li> <p style="color: #33271a; font-size: 20px;">Deep Pedicure Treatment 65$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Luxurious and thorough pedicure for ultimate foot pampering and relaxation.</p>
+  </div>
+
+  <div>
+      <span class="custom-target-fix" id="custom-accordion3"></span>
+
+      <a href="#custom-accordion3" id="custom-open-accordion3" title="Open" style="color: #33271a;">Facials</a>
+
+      <a href="#custom-accordion" id="custom-close-accordion3" title="Close" style="color: #33271a;">Facials</a>
+
+      <div class="custom-accordion-content">
+        <li> <p style="color: #33271a; font-size: 20px;">Golden Glow Facial (120 mins) 300$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Revitalizing facial treatment for a radiant and luminous golden complexion.</p><br><br>
+        <li> <p style="color: #33271a; font-size: 20px;">Mini Glow Facial (60 mins) 100$</p></li>
+        <p style="color: #33271a; position: absolute; margin-top: 25px; font-size: 18px;">Quick and refreshing facial treatment for a radiant and rejuvenated complexion.</p>
+      </div>
+  </div>
+</div>
+
+
+<div class="footer-basic" style="background-color: #c9b7a8;">
+  <footer>
+      <div class="social"><a href="#"><i class="icon ion-social-instagram" style="color: #33271a;"></i></a><a href="#"><i class="icon ion-social-twitter" style="color: #33271a;"></i></a><a href="#"><i class="icon ion-social-facebook" style="color: #33271a;"></i></a></div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="./home.html" style="color: #33271a;">Home</a></li>
+          <li class="list-inline-item"><a href="./services.html" style="color: #33271a;"> Our Services</a></li>
+          <li class="list-inline-item"><a href="./specialists.html" style="color: #33271a;">Our Specialists</a></li>
+          <li class="list-inline-item"><a href="./contact.html" style="color: #33271a;">Contact Us</a></li>
+      </ul>
+      <p class="copyright" style="color: #33271a;">Serenity Spa © 2023</p>
+  </footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

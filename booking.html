@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+<body>
+        
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #c9b7a8;">
+        <a class="navbar-brand" href="./home.html" style="font-family: 'Petit Formal Script', cursive; color:#33271a"><img src="https://api.ellecanada.com/app/uploads/2021/10/FOUR-SEASONS-SPA-Best-Spas-in-Canada-.jpeg" alt="" width="50" height="50">  Serenity Spa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page"  href="./home.html" style="color: #33271a;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html" style="color: #33271a; ">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./specialists.html" style="color: #33271a;">Our Specialists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html" style="color: #33271a;  ">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./booking.html" style="margin-left: 1050px; color: #33271a;  ">Book Now</a>
+            </li>
+          </ul>
+        </div>
+    
+    </nav>
+        </div>
+      </div>
+
+      <div class="parallax">
+       
+
+<h1 style="color: #f3ede3; font-family: 'Petit Formal Script', cursive; font-size:100px; margin-left: 30%; position: absolute; margin-top: 50px; ">Appointments</h1>
+
+</div>
+
+
+
+
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+  </div>
+
+  <div class="elem-group inlined">
+    <label for="checkin-date">Appointment Date</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="appointment-hour">Appointment Hour</label>
+    <input type="time" id="checkout-date" name="hour" required>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Choose a Specialist</label>
+    <select id="room-selection" name="room_preference" min="07.00" max="20.00" required>
+        <option value="">Choose a Specialist</option>
+        <option value="connecting">Sarah</option>
+        <option value="adjoining">Emma</option>
+        <option value="adjacent">Abby</option>
+        <option value="adjacent">Alex</option>
+      </select>
+      <br>
+        <div class="elem-group" style="width: 100%; margin-left: -2px">
+          <label for="service-selection">Choose a Service</label>
+          <select id="service-selection" name="service_preference" required>
+              <option value="">Choose a Service</option>
+              <option value="connecting">Stockholm</option>
+              <option value="adjoining">Aromassage</option>
+              <option value="adjacent">Bali</option>
+              <option value="adjacent">HotStone</option>
+              <option value="connecting">Standard Nail Treatment</option>
+              <option value="adjoining">Deep Manicure Treatment</option>
+              <option value="adjacent">Standard Pedicure Treatment</option>
+              <option value="adjacent">Deep Pedicure Treatment</option>
+              <option value="adjacent">Golden Glow Facial</option>
+              <option value="adjacent">Mini Glow Facial</option>
+    </select>
+  </div>
+  <div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style=" height: 50px; background: #c9b7a8; border: none; color: white; font-size: 1.25em; border-radius: 4px; cursor: pointer; margin-left: 35% ; margin-top: 20%;">
+    Book Now!
+  </button>
+
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Booking Confirmed!</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Your Booking is Confirmed!
+        Details will be sent to your email shortly.
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="background-color: #c9b7a8; border-color: #c9b7a8;">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</form>
+
+<div class="footer-basic" style="background-color: #c9b7a8; width: 400%; margin-top: 200px; margin-left: -800px;">
+  <footer>
+      <div class="social"><a href="#"><i class="icon ion-social-instagram" style="color: #33271a;"></i></a><a href="#"><i class="icon ion-social-twitter" style="color: #33271a;"></i></a><a href="#"><i class="icon ion-social-facebook" style="color: #33271a;"></i></a></div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="./home.html" style="color: #33271a;">Home</a></li>
+          <li class="list-inline-item"><a href="./services.html" style="color: #33271a;"> Our Services</a></li>
+          <li class="list-inline-item"><a href="./specialists.html" style="color: #33271a;">Our Specialists</a></li>
+          <li class="list-inline-item"><a href="./contact.html" style="color: #33271a;">Contact Us</a></li>
+      </ul>
+      <p class="copyright" style="color: #33271a;">Serenity Spa © 2023</p>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playball&display=swap');
+body{
+background-color: #f3ede3;
+}
+
+.parallax { 
+  background-image: url("/Users/zeynepbusesevincel/Desktop/SEG3525_project1/images/FOUR-SEASONS-SPA-Best-Spas-in-Canada-.jpeg");
+  width: 110%; 
+  min-height: 800px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0px;
+
+
+
+}
+
+
+div.elem-group {
+  margin: auto;
+  width: 30%;
+}
+
+div.elem-group.inlined {
+  width: 32%;
+  display: inline-block;
+  margin-left: 35%;
+  
+}
+
+label {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: #c9b7a8;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 35% ;
+  margin-top: 20%;
+}
+
+button:hover {
+  border: 2px solid black;
+}
+
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+</style>
+
+
+
+<script>
+
+var currentDateTime = new Date();
+var year = currentDateTime.getFullYear();
+var month = (currentDateTime.getMonth() + 1);
+var date = (currentDateTime.getDate() + 1);
+
+if(date < 10) {
+  date = '0' + date;
+}
+if(month < 10) {
+  month = '0' + month;
+}
+
+var dateTomorrow = year + "-" + month + "-" + date;
+var checkinElem = document.querySelector("#checkin-date");
+var checkoutElem = document.querySelector("#appointment-hout");
+
+checkinElem.setAttribute("min", dateTomorrow);
+
+checkinElem.onchange = function () {
+    checkoutElem.setAttribute("min", this.value);
+}
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+
+
+</script>
+
+
+</html>
